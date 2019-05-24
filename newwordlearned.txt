@@ -1,0 +1,65 @@
+prompt-similar to alert with input field
+push()-add at last
+unshift()-add at first
+array clear
+pop-removes from the end of an array
+shift-removes from the beginning of array
+splice-remove from a specific array index
+filter-allows you to prograatically remove the elements from array
+LoDash
+
+<!-------- removing the i/p number----------------|
+var arr = [1, 2, 3, 4, 5, 5, 6, 7, 8, 5, 9, 0];   |
+                                                  |    
+for( var i = 0; i < arr.length; i++){             |
+   if ( arr[i] === 5) {							  |
+     arr.splice(i, 1); 							  |
+     i--;										  |
+   } 											  |
+}												  |
+												  |
+//=> [1, 2, 3, 4, 6, 7, 8, 9, 0]				  |
+-----------from array ---------------------------->
+
+
+<!-------- MAKING REMOVE METHOD--------------------|
+\function arrayRemove(arr, value) {				   |	
+												   |	
+   return arr.filter(function(ele){				   |	
+       return ele != value;						   |
+   });											   |	
+   												   |
+}												   |		
+												   |
+												   |
+var result = arrayRemove(array, 6);]			   |
+--------------------- ---------------------------->|
+---------creating table html file------------------------------------------|
+<head> 																	   |					
+<meta charset=utf-8 /> 													   |
+<title>Create a table</title> 											   |	
+<style type="text/css"> 												   |
+body {margin: 30px;} 													   |
+</style>  																   |
+</head><body> 															   |
+<table id="myTable" border="1"> 
+</table><form> 
+<input type="button" onclick="createTable()" value="Create the table"> 
+</form></body>
+-----------------------------------------------------------------------------
+function createTable()                                        				|      
+{																			|
+rn = window.prompt("Input number of rows", 1);								|
+cn = window.prompt("Input number of columns",1);							|
+																			|  
+ for(var r=0;r<parseInt(rn,10);r++)											|
+  {																			|
+   var x=document.getElementById('myTable').insertRow(r);					|
+   for(var c=0;c<parseInt(cn,10);c++)  										|
+    {																		|
+     var y=  x.insertCell(c);												|
+     y.innerHTML="Row-"+r+" Column-"+c; 									|
+    }																		|
+   }																		|
+}																			|
+----------------------------------------------------------------------------|

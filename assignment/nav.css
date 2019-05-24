@@ -1,0 +1,19 @@
+#loading {
+    -webkit-animation: rotation 4s infinite linear;
+    left: calc(60%-10px);
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+header img {
+    position: relative;
+    vertical-align: middle;
+    border-style: none;
+    bottom: 7px !important;
+}

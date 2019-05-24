@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="form-group">
+                  <label>Debit</label>
+  <input type="text" value="$" required="required" class="form-control" name="debit" id="debit" onkeyup="disableField()"/>
+</div>
+  <div class="form-group">
+ <label>Credit</label>
+  <input type="text" value="$" required="required" class="form-control" name="credit" id="credit" onkeyup="disableField1()"/>
+</div>
+
+<script type="text/javascript">
+var disableField = function () {
+  var state = document.getElementById("debit").value.length > 1;
+  document.getElementById("credit").disabled = state;
+  };
+  var disableField1=function(){
+  var state = document.getElementById("credit").value.length > 1;
+  document.getElementById("debit").disabled = state;
+};
+</script>
+</body>
+</html>
